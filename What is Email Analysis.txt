@@ -1,0 +1,27 @@
+WHAT IS EMAIL ANALYSIS?
+
+The process of extracting the email header information to expose the email file details. The email header contains the technical details of the 
+email like sender, recipient, path, return address and attachments. Usually, these details are enough to determine if there is something 
+suspicious/abnormal in the email and decide on further actions on the email, like filtering/quarantining or delivering. This process can be done 
+manually and with the help of tools.
+
+There are two main concerns in email analysis.
+        Security issues: Identifying suspicious/abnormal/malicious patterns in emails.
+        Performance issues: Identifying delivery and delay issues in emails.
+
+Social engineering: Social engineering is the psychological manipulation of people into performing or divulging information by exploiting weaknesses 
+        in human nature. These "weaknesses" can be curiosity, jealousy, greed, kindness, and willingness to help someone.
+Phishing: Phishing is a sub-section of social engineering delivered through email to trick someone into either revealing personal information and 
+        credentials or executing malicious code on their computer.
+
+        Phishing emails will usually appear to come from a trusted source, whether that's a person or a business. They include content that tries to 
+tempt or trick people into downloading software, opening attachments, or following links to a bogus website.
+
+ -> Important Note: In-depth analysis requires an isolated environment to work. It is only suggested to download and upload the received emails and 
+ attachments if you are in the authorised team and have an isolated environment. Suppose you are outside the corresponding team or a regular user. In 
+ that case, you can evaluate the email header using the raw format and conduct the essential checks like the sender, recipient, spam score and server 
+ information. Remember that you have to inform the corresponding team afterwards.
+ 
+ 
+ 
+ Source : TryHackme
