@@ -1,0 +1,65 @@
+STRUCTURE OF AN EMAIL HEADER
+
+
+
+FIELD						DETAILS
+
+From						The sender's address.
+To						The receiver's address, including CC and BCC.
+Date						Timestamp, when the email was sent.
+Subject						The subject of the email.
+Return path					The return address of the reply, a.k.a. "Reply-To".
+						If you reply to an email, the reply will go to the address mentioned in this field.
+Domain Key and DKIM Signatures			Email signatures are provided by email services to identify and authenticate emails.
+Sender Policy Framework (SPF)			Shows the server that was used to send the email.
+						It will help to understand if the actual server is used to send the email from a specific domain.
+Message-ID					Unique ID of the email.
+MIME-Version 					Used MIME version.
+						It will help to understand the delivered "non-text" contents and attachments.
+X-Headers					The receiver mail providers usually add these fields.
+						Provided info is usually experimental and can be different according to the mail provider.
+X-Received					Mail servers that the email went through.
+X-Spam Status					Spam score of the email.
+X-Mailer					Email client name.
+
+
+
+
+IMPORTANT EMAIL HEADER FIELDS FOR QUICK ANALYSIS
+
+
+
+QUESTIONS TO ASK / REQUIRED CHECKS					EVALUATION
+
+Do the "From", "To", and "CC" fields contain valid addresses?		Having invalid addresses is a red flag.
+Do the "From" and "To" fields are the same?				Having the same sender and recipient is a red flag.
+Do the "From" and "Return-Path" fields are the same?			Having different values in these sections is a red flag.
+Was the email sent from the correct server?				Email should have come from the official mail servers of the sender.
+Does the "Message-ID" field exist, and is it valid?			Empty and malformed values are red flags.
+Do the hyperlinks redirect to suspicious/abnormal sites?		Suspicious links and redirections are red flags.
+Do the attachments consist of or contain malware?			Suspicious attachments are a red flag.
+									File hashes marked as suspicious/malicious by sandboxes are a red flag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+						
+						
+						
+						
+						
