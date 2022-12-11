@@ -1,0 +1,96 @@
+We can use an Email Header Parser Tool or configure a text editor to highlight and spot the email header's details easily.
+
+-> You can use Sublime Text to view email files without opening and executing any of the linked attachments/commands. You can view the email
+   file in the text editor using two approaches.
+        - Right-click on the sample and open it with Sublime Text.
+        - Open Sublime Text and drag & drop the sample into the text editor.
+
+If your file has a ".eml" or ".msg" extension, the sublime text will automatically detect the structure and highlight the header fields for 
+ease of readability. Note that if you are using a ".txt" or any other extension, you will need manually select the highlighting format by using
+the button located at the lower right corner.
+
+
+'Text editors are helpful in analysis, but there are some tools that can help you to view the email details in a clearer format.'
+
+1. emlAnalyzer tool - to view the body of the email and analyse the attachments.
+		    - The tool can show the headers, body, embedded URLs, plaintext and HTML data, and attachments.
+
+Usage Query :
+
+QUERY DETAILS						EXPLANATION
+
+emlAnalyzer						Main Command
+-i 							File to analyse
+							-i /path-to-file/filename
+--header						Show header
+-u							Show URLs
+--text							Show clear text data
+--extract-all						Extract all attachments
+
+
+Sample COMMAND : 
+	
+	emlAnalyzer -i /filename.eml --header --html -u --text --extract-all
+
+
+At this point, you should have completed the following checks.
+	- Sender and recipient controls
+	- Return path control
+	- Email server control
+	- Message-ID control
+	- Spam value control 
+	- Attachment control (Does the email contains any attachment?)
+
+-> Additionally, you can use some Open Source Intelligence (OSINT) tools to check email reputation and enrich the findings
+-> Tool : https://emailrep.io/
+	Here, if you find any suspicious URLs and IP addresses, consider using some OSINT tools for further investigation.
+
+
+Further Investigation Tools
+
+TOOL							PURPOSE
+
+ViruTotal						A service that provides a cloud-based detection toolset and sandbox environment.
+InQuest							A service provides network and file analysis by using threat analytics.
+IPinfo.io						A service that provides detailed information about an IP address by focusing on 
+							  geolocation data and service provider.
+Talos Reputation					An IP reputation check service is provided by Cisco Talos.
+Urlscan.io						A service that analyses websites by simulating regular user behaviour.
+Browserling						A browser sandbox is used to test suspicious/malicious links.
+Wannabrowser						A browser sandbox is used to test suspicious/malicious links.
+
+
+Further you can continue with body and attachment analysis. Let's focus on analysing the email body and attachments. The sample doesn't have 
+URLs, only an attachment. You need to compute the value of the file to conduct file-based reputation checks and further your analysis. 
+
+	- You can use the sha256sum tool/utility to calculate the file's hash value. 
+Note: Remember to navigate to the file's location before attempting to calculate the file's hash value.
+	> sha256sum Division_of....
+
+- Once you get the sum of the file, you can go for further analysis using the VirusTotal.
+	Tool: https://www.virustotal.com/gui/home/upload
+
+- Continue on reputation check on InQuest to enrich the gathered data.
+	Tool: https://labs.inquest.net/
+
+- Now visit the tool website and use the 'INDICATOR LOOKUP' option to conduct hash-based analysis.
+	- Search the hash value
+	- Click on the SHA256 hash value highlighted with yellow to view the detailed report.
+	- Analyse the file details.
+
+
+
+
+
+--> You are finished with the initial email analysis. The next steps are creating a report of findings and informing the team members/manager 
+    in the appropriate format. <--
+
+
+
+
+
+
+
+
+
+
